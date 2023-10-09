@@ -1,0 +1,30 @@
+CREATE DATABASE budget;
+USE budget;
+
+CREATE TABLE user (
+id INT PRIMARY KEY AUTO_INCREMENT,
+name VARCHAR(50),
+birth_place VARCHAR(50),
+email VARCHAR(50)
+);
+
+CREATE TABLE expense (
+id INT PRIMARY KEY AUTO_INCREMENT,
+location VARCHAR(50),
+amount INT,
+user_id INT,
+FOREIGN KEY (user_id) REFERENCES user(id)
+);
+
+INSERT INTO user (name, birth_place, email) VALUES
+('Kiss Balázs', 'Budapest', 'k.b556@gmail.com'),
+('Nagy Rebeka', 'Vác', 'rebecca.big@gmail.com'),
+('Nemes Kristóf', 'Gyál', 'nemeskrisz77@gmail.com'),
+('Harcsár Imola', 'Eger', 'imihar12@gmail.com');
+
+INSERT INTO expense ( location, amount, user_id) VALUES
+('Apacs ékszer', 25000, 1),
+('Starbucks', 2300, 1),
+('H&M', 20000, 2),
+('Kerek ABC', 7800, 3),
+('Cserépváros', 15000, 4);
