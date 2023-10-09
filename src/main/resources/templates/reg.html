@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Budget</title>
+</head>
+<body>
+
+
+<form th:action="@{/regist}" method="post">
+    <label>Name: <input placeholder="Write here" type="text" id="name" name="name"></label>
+    <label>Birth Place: <input placeholder="Write here" type="text" id="birthPlace" name="birthPlace"></label>
+    <label>email: <input placeholder="Write here" type="text" id="email" name="email"></label>
+    <div>
+        <label>Expense</label>
+        <label>Where did you buy? : <input placeholder="Write here" type="text" id="location" name="expense.setLocation"></label>
+        <label>Amount: <input placeholder="Write here" type="number" id="amount" name="expense.setAmount"></label>
+    </div>
+    <button type="submit">Submit</button>
+</form>
+
+</body>
+</html>
